@@ -1,0 +1,19 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "description": "A TypeScript-based command-line interface to fetch real-time exchange rates between Brazilian Real and US Dollar using native fetch API.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericsousa/currency-converter.git"
+  },
+  "author": "Eric Sousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericsousa/currency-converter/issues"
+  },
+  "homepage": "https://github.com/ericsousa/currency-converter#readme"
+}
