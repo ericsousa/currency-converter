@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ericsousa/currency-converter/issues"
   },
-  "homepage": "https://github.com/ericsousa/currency-converter#readme"
+  "homepage": "https://github.com/ericsousa/currency-converter#readme",
+  "dependencies": {
+    "@types/node": "^25.3.3",
+    "typescript": "^5.9.3"
+  }
 }
