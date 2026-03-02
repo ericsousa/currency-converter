@@ -27,6 +27,10 @@ switch (option) {
         const valorUsd = Number(prompt("Entre o valor USD: "));
         console.log(`Resultado: ${(valorUsd * exchangeRate).toFixerd(2)} BRL`);
         break;
+    case '3':
+        const exchangeRate = Number(prompt("Entre o valor da nova cotação: "));
+        console.log(`Cotação: 1.00 USD = ${exchangeRate} BRL`);
+        break;
     case '0':
         console.log("Saindo...");
         break;
