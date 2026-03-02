@@ -23,6 +23,10 @@ switch (option) {
         const valorBrl = Number(prompt("Entre o valor em BRL: "));
         console.log(`Resultado: ${(valorBrl / exchangeRate).toFixed(2)} USD`);
         break;
+    case '2':
+        const valorUsd = Number(prompt("Entre o valor USD: "));
+        console.log(`Resultado: ${(valorUsd * exchangeRate).toFixerd(2)} BRL`);
+        break;
     case '0':
         console.log("Saindo...");
         break;
