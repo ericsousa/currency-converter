@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ericsousa/currency-converter#readme",
   "dependencies": {
     "@types/node": "^25.3.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
