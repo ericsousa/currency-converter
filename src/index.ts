@@ -33,6 +33,7 @@ async function start() {
         console.log("1. BRL para USD");
         console.log("2. USD para BRL");
         console.log("3. Alterar cotação");
+        console.log("4. Buscar cotação do dia");
         console.log("0. Sair");
         option = prompt("\nEscolhar uma opção: ");
 
@@ -48,6 +49,10 @@ async function start() {
             case '3':
                 exchangeRate = Number(prompt("Entre o valor da nova cotação: "));
                 console.log(`\nCotação: 1.00 USD = ${exchangeRate.toFixed(2)} BRL`);
+                break;
+            case '4':
+                exchangeRate = await fetchExchangeRate();
+                console.log(`Cotação do dia: 1.00 USD = ${exchangeRate.toFixed(2)} BRL`);
                 break;
             case '0':
                 console.log("\nSaindo...");
