@@ -31,7 +31,7 @@ do {
             break;
         case '3':
             exchangeRate = Number(prompt("Entre o valor da nova cotação: "));
-            console.log(`\nCotação: 1.00 USD = ${exchangeRate} BRL`);
+            console.log(`\nCotação: 1.00 USD = ${exchangeRate.toFixed(2)} BRL`);
             break;
         case '0':
             console.log("\nSaindo...");
