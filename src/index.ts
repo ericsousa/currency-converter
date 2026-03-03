@@ -1,22 +1,28 @@
 import promptSync from "prompt-sync";
 
-
+// Uma função 'async' indica que ela faz uma tarefa que pode demorar. Habilita o uso de 'await' dentro dela
 async function fetchExchangeRate(): Promise<number> {
     try {
+        // 'await' pausa a execução e espera a resopsta do servidor da api
         const response = await fetch("https://economia.awesomeapi.com.br/json/last/USD-BRL");
+        // '.json()' transforma dados brutos para formato json
         const data = await response.json();
+
+        //retorna o valor da cotação atual convertido para número
         return Number(data.USDBRL.bid);
     } catch (error) {
+        console.log("Erro ao obter cotação do dia. Usando cotação padrão.")
         return 5.00;
     }
 }
 
+// como estamos usando 'await' temos que encapsular o código em uma função 'async'
 async function start() {
 
-    
     const prompt = promptSync();
-    //let exchangeRate:number = 5.00
-    
+
+    // como a 'fetchExchangeRate' é assíncrona, também precisamos do 'await' aqui;
+    // o 'exchangeRate' só será definido depois que a função retornar algum resultado.    
     let exchangeRate = await fetchExchangeRate();
 
     console.log(`
@@ -63,5 +69,5 @@ async function start() {
 
     } while(option != '0');
 }
-
+// chamada da função principal que inicia o fluxo 'async'
 start();
