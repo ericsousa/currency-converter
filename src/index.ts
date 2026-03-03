@@ -13,7 +13,8 @@ Cotação: 1.00 USD = ${exchangeRate} BRL
 `);
 
 console.log("Menu: ");
-console.log("1. BRL para USB");
+console.log("1. BRL para USD");
+console.log("2. USD para BRL");
 console.log("0. Sair");
 
 const option = prompt("Escolhar uma opção: ");
@@ -25,10 +26,10 @@ switch (option) {
         break;
     case '2':
         const valorUsd = Number(prompt("Entre o valor USD: "));
-        console.log(`Resultado: ${(valorUsd * exchangeRate).toFixerd(2)} BRL`);
+        console.log(`Resultado: ${(valorUsd * exchangeRate).toFixed(2)} BRL`);
         break;
     case '3':
-        const exchangeRate = Number(prompt("Entre o valor da nova cotação: "));
+        exchangeRate = Number(prompt("Entre o valor da nova cotação: "));
         console.log(`Cotação: 1.00 USD = ${exchangeRate} BRL`);
         break;
     case '0':
